@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "author": "Michael Vargas <msvargas97@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "app": "yarn workspace client start",
+    "web": "yarn workspace client web",
+    "server": "yarn workspace server start",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "concurrently": "^5.0.0"
+  }
+}
